@@ -6,5 +6,7 @@ public class Main {
 
         Segment segment = new Segment(p1, p2);
         System.out.println(segment.toSVG());
+
+        Point[] points = new Point[10];
     }
 }
