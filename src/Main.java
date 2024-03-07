@@ -2,7 +2,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        Style style = new Style("Lime", "red" ,2.0);
+        Style style = new Style("lime", "red" ,2.0);
         System.out.println(style.toSVG());
 
         Point point1 = new Point(100, 0);
