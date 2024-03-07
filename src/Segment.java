@@ -27,7 +27,7 @@ public class Segment {
                 "style=\"stroke:red:stroke-width:2\" />", p1.x, p1.y, p2.x, p2.y);
     }
 
-    public static Segment[] getLines (Segment segment, Point point) {
+    public static Segment[] perpendicular (Segment segment, Point point) {
         double a = (segment.getP2().y - segment.getP1().y) / (segment.getP2().x - segment.getP1().x);
         double b = segment.getP1().y - (segment.getP1().x * a);
         double aPrim = -1/a;
