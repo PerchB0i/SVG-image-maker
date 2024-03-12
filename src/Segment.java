@@ -24,7 +24,7 @@ public class Segment {
     public String toSVG() {
         return String.format(Locale.ENGLISH,"<line x1=\"%f\" y1=\"%f\" " +
                 "x2=\"%f\" y2=\"%f\" " +
-                "style=\"stroke:red:stroke-width:2\" />", p1.x, p1.y, p2.x, p2.y);
+                "style=\"stroke:red;stroke-width:2\" />", p1.x, p1.y, p2.x, p2.y);
     }
 
     public static Segment[] perpendicular (Segment segment, Point point) {
@@ -33,7 +33,7 @@ public class Segment {
         double aPrim = -1/a;
         double b1 = point.y - (point.x * aPrim);
 
-        double x1 = point.x -Math.abs(segment.getP1().x - segment.getP2().x);
+        double x1 = point.x - Math.abs(segment.getP1().x - segment.getP2().x);
         double x2 = Math.abs(segment.getP1().x - segment.getP2().x) + point.x;
 
         double y1 = aPrim*x1 + b1;
