@@ -14,15 +14,14 @@ public class Main {
         polygon.setPoint(1, point2);
         polygon.setPoint(2, point3);
 
+        Elipse elipse = new Elipse(style, new Point(100,100), 40, 40);
+
         SvgScene scene = new SvgScene();
         //scene.addPolygon(polygon);
         Polygon square = Polygon.square(new Segment(new Point(20.0,10.0), new Point(40.0, 50.0)), style);
         scene.addPolygon(square);
+        scene.addPolygon(elipse);
 
-        Segment seg = new Segment(new Point(20.0,10.0), new Point(40.0, 10.0));
-        System.out.println(seg.toSVG());
-        System.out.println(Segment.perpendicular(seg, new Point((seg.getP1().x + seg.getP2().x) / 2 , (seg.getP1().y + seg.getP2().y) / 2))[0].toSVG());
-        System.out.println(Segment.perpendicular(seg, new Point((seg.getP1().x + seg.getP2().x) / 2 , (seg.getP1().y + seg.getP2().y) / 2))[1].toSVG());
         scene.saveHTML("file.html");
 
     }

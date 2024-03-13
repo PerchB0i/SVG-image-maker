@@ -1,10 +1,21 @@
 import java.util.Locale;
 
-public class Polygon {
+public class Polygon extends Shape {
     private Point[] arr;
     private Style style;
 
+    @Override
+    public String toSVG() {
+        String pointsString = "";
+        for(Point point : arr)
+            pointsString += point.x + "," + point.y + " ";
+
+        return String.format(Locale.ENGLISH,"" +
+                "<polygon points=\"%s\" %s/>", pointsString, style.toSVG());
+    }
+
     public Polygon(int count, Style style) {
+        super(style);
         arr = new Point[count];
         this.style = style;
     }
@@ -15,15 +26,6 @@ public class Polygon {
 
     public void setPoints(Point[] points){
         arr = points;
-    }
-
-    public String toSvg() {
-        String pointsString = "";
-        for(Point point : arr)
-            pointsString += point.x + "," + point.y + " ";
-
-        return String.format(Locale.ENGLISH,"" +
-                "<polygon points=\"%s\" %s/>", pointsString, style.toSVG());
     }
 
     public static Polygon square(Segment diagonal, Style style) {
