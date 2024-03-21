@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ac37216-c652-4e60-ac7c-8ccfb16bcd1d" name="Changes" comment="example polygon :)">
+    <list default="true" id="9ac37216-c652-4e60-ac7c-8ccfb16bcd1d" name="Changes" comment="Added Elipse class and implemented it's usage">
+      <change afterPath="$PROJECT_DIR$/src/ShapeDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SolidFilledPolygon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SolidFilledShapeDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TransformationDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Elipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Elipse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Polygon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Segment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Segment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SvgScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SvgScene.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +33,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PerchB0i&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="acd99f2f-af26-4bb9-8caf-ae5d411cfef6" />
+        <option name="url" value="https://github.com/PerchB0i/takie_oop1" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2d2m8TSJ7l5Ii01RcJGOfpGqWdn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -31,8 +58,11 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/student/Desktop/tak/takie_oop1/src/Main.java&quot;
   }
 }</component>
@@ -49,6 +79,13 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -99,39 +136,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709218796539</updated>
     </task>
-    <task id="LOCAL-00006" summary="added Polygon and Style">
+    <task id="LOCAL-00006" summary="Added creation of square in Polygon">
       <option name="closed" value="true" />
-      <created>1709824882690</created>
+      <created>1710243950084</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1709824882690</updated>
+      <updated>1710243950084</updated>
     </task>
-    <task id="LOCAL-00007" summary="added SvgScene class with writing to HTML file">
+    <task id="LOCAL-00007" summary="Added creation of square in Polygon">
       <option name="closed" value="true" />
-      <created>1709826556837</created>
+      <created>1710351146547</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1709826556837</updated>
+      <updated>1710351146547</updated>
     </task>
-    <task id="LOCAL-00008" summary="added SvgScene class with writing to HTML file">
-      <option name="closed" value="true" />
-      <created>1709826818028</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1709826818028</updated>
-    </task>
-    <task id="LOCAL-00009" summary="example polygon :)">
-      <option name="closed" value="true" />
-      <created>1709826957570</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1709826957570</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -139,9 +160,7 @@
     <MESSAGE value="added enters" />
     <MESSAGE value="ex. 1" />
     <MESSAGE value="ex. 2" />
-    <MESSAGE value="added Polygon and Style" />
-    <MESSAGE value="added SvgScene class with writing to HTML file" />
-    <MESSAGE value="example polygon :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="example polygon :)" />
+    <MESSAGE value="Added creation of square in Polygon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added creation of square in Polygon" />
   </component>
 </project>

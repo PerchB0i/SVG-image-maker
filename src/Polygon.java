@@ -1,23 +1,12 @@
 import java.util.Locale;
 
-public class Polygon extends Shape {
+public class Polygon implements Shape {
     private Point[] arr;
     private Style style;
 
-    @Override
-    public String toSVG() {
-        String pointsString = "";
-        for(Point point : arr)
-            pointsString += point.x + "," + point.y + " ";
-
-        return String.format(Locale.ENGLISH,"" +
-                "<polygon points=\"%s\" %s/>", pointsString, style.toSVG());
-    }
-
     public Polygon(int count, Style style) {
-        super(style);
-        arr = new Point[count];
         this.style = style;
+        arr = new Point[count];
     }
 
     public void setPoint(int index, Point point) {
@@ -28,20 +17,28 @@ public class Polygon extends Shape {
         arr = points;
     }
 
-    public static Polygon square(Segment diagonal, Style style) {
-        Point diagMidPoint = new Point((diagonal.getP1().x + diagonal.getP2().x) / 2, (diagonal.getP1().y + diagonal.getP2().y) / 2);
-        Segment[] segs = Segment.perpendicular(diagonal, diagMidPoint);
-        Segment diag2 = new Segment(new Point(segs[0].getP2().x, segs[0].getP2().y), new Point(segs[1].getP2().x, segs[1].getP2().y));
-        Polygon square = new Polygon(4, style);
-        Point[] squarePoints = {
-                diag2.getP2(),
-                diagonal.getP2(),
-                diag2.getP1(),
-                diagonal.getP1()
-        };
-        square.setPoints(squarePoints);
+    public String toSvg(String parameters) {
+        String pointsString = "";
+        for(Point point : arr)
+            pointsString += point.x + "," + point.y + " ";
 
-        return square;
+        return String.format(Locale.ENGLISH,"" +
+                "<polygon points=\"%s\" %s />", pointsString, parameters);
+    }
+
+    static Polygon sqare(Segment line, Style style) {
+        double x = (line.getP1().x + line.getP2().x) / 2;
+        double y = (line.getP1().y + line.getP2().y) / 2;
+        Point center = new Point(x, y);
+        Segment[] secondLine = Segment.perpendicular(line, center, line.getDistance() / 2);
+
+        Polygon polygon = new Polygon(4, style);
+        polygon.setPoint(0, line.getP1());
+        polygon.setPoint(1, secondLine[0].getP2());
+        polygon.setPoint(2, line.getP2());
+        polygon.setPoint(3, secondLine[1].getP2());
+
+        return polygon;
     }
 
 }
